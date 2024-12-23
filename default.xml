@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+  <remote name="yocto"
+          fetch="https://github.com/yoctoproject" />
+
+  <remote name="raspberrypi"
+          fetch="https://github.com/agherzan" />
+
+  <remote name="openembedded"
+          fetch="https://github.com/openembedded" />
+
+    <remote name="ros"
+          fetch="https://github.com/ros" />
+
+  <remote name="mogbe"
+          fetch="https://github.com/gsarenas" />
+
+  <default remote="yocto" revision="scarthgap" />
+
+  <!-- Poky repository -->
+  <project name="poky" path="layers" revision="aee2a47dd999c89811647260db4170e821c04733" />
+
+  <!-- meta-raspberrypi repository -->
+  <project name="meta-raspberrypi" path="layers/meta-raspberrypi" remote="raspberrypi" revision="6df7e028a2b7b2d8cab0745dc0ed2eebc3742a17" />
+
+  <!-- meta-openembedded repository -->
+  <project name="meta-openembedded" path="layers/meta-openembedded" remote="openembedded" revision="b8d1a14f7f3b76457c36752202ea7ae5881b6654" />
+
+  <!-- meta-ros respository -->
+  <project name="meta-ros" path="layers/meta-ros" remote="ros" revision="1f17f925d06cbc0a1b6cd22f9fb00b31d9001e18" />
+
+  <!-- Custom meta-mogbe repository -->
+  <project name="meta-mogbe" path="layers/meta-mogbe" remote="mogbe" revision="scarthgap" >
+    <copyfile dest="setup-yocto" src="buildconf/setup-yocto.sh"/>
+  </project>
+</manifest>
